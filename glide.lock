@@ -1,0 +1,37 @@
+hash: 6cdf294629b68b19d29c6b807c46cb86088467cd126ed0fb99bc4431536945e3
+updated: 2019-04-27T14:40:13.492989868-07:00
+imports:
+- name: github.com/coreos/go-systemd
+  version: 95778dfbb74eb7e4dbaf43bf7d71809650ef8076
+  subpackages:
+  - activation
+- name: github.com/docker/go-connections
+  version: 7395e3f8aa162843a74ed6d48e79627d9792ac55
+  subpackages:
+  - sockets
+- name: github.com/docker/go-plugins-helpers
+  version: 1e6269c305b8c75cfda1c8aa91349c38d7335814
+  subpackages:
+  - network
+  - sdk
+- name: github.com/Microsoft/go-winio
+  version: 3fe4fa31662f6ede2353d913e93907b8e096e0b6
+  subpackages:
+  - pkg/guid
+- name: github.com/opencontainers/runc
+  version: dae70e8efea4199c8ac3d8c80eb23e1f75e60ebf
+  subpackages:
+  - libcontainer/user
+- name: github.com/pkg/errors
+  version: 27936f6d90f9c8e1145f11ed52ffffbfdb9e0af7
+- name: golang.org/x/net
+  version: 4829fb13d2c62012c17688fa7f629f371014946d
+  subpackages:
+  - internal/socks
+  - proxy
+- name: golang.org/x/sys
+  version: a129542de9ae0895210abff9c95d67a1f33cb93d
+  subpackages:
+  - unix
+  - windows
+testImports: []

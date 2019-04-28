@@ -1,0 +1,5 @@
+package: ipvlan_libnetwork
+import:
+- package: github.com/docker/go-plugins-helpers
+  subpackages:
+  - network
