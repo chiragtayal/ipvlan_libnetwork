@@ -12,6 +12,7 @@ imports:
 - name: github.com/docker/go-plugins-helpers
   version: 1e6269c305b8c75cfda1c8aa91349c38d7335814
   subpackages:
+  - ipam
   - network
   - sdk
 - name: github.com/Microsoft/go-winio

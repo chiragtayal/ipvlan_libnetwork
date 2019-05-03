@@ -9,19 +9,26 @@ import(
 	"ipvlan_libnetwork/ipvlan"
 	"github.com/opencontainers/runc/libcontainer/user"
 	"github.com/docker/go-plugins-helpers/network"
+	"github.com/docker/go-plugins-helpers/ipam"
 )
 
 func main() {
 
-	d := ipvlan.NewDriver()
 	u, err := user.LookupUser("root")
 	if err != nil {
 		panic(err)
 	}
 
-	h := network.NewHandler(d)
-	if err2 := h.ServeUnix("Net", u.Gid); err2 != nil {
-		panic(err2)
+	nd := ipvlan.NewIpvlanDriver()
+	nh := network.NewHandler(nd)
+	if err := nh.ServeUnix("Net", u.Gid); err != nil {
+		panic(err)
+	}
+
+	id := ipvlan.NewIpamDriver()
+	ih := ipam.NewHandler(id)
+	if err := ih.ServeUnix("Ipam", u.Gid); err != nil {
+		panic(err)
 	}
 	log.Println("... Running ...")
 
